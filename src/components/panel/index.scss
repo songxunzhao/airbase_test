@@ -1,0 +1,16 @@
+.panel {
+    border-radius: 8px;
+    overflow: hidden;
+
+    & > .panel-title {
+        background-color: white;
+        border-bottom: 1px solid rgba(34, 34, 34, 0.05);
+        padding: 15px;
+    }
+
+    & > .panel-body {
+        background-color: white;
+        min-height: 100px;
+        padding: 15px;
+    }
+}

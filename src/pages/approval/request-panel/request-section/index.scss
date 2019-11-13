@@ -1,0 +1,42 @@
+@import 'define.scss';
+
+.vertical-list {
+    .list-item {
+        float: left;
+        width: 100%;
+    }
+
+    & > .list-item + .list-item {
+        border-top: 1px solid rgba(34, 34, 34, 0.05);
+    }
+
+    @include respond-above(md) {
+        .list-item.list-md-item {
+            width: 50%;
+            float: left;
+        }
+    }
+
+    &:after {
+        display: block;
+        content: ' ';
+        clear: both;
+    }
+}
+
+.form-item-label {
+    color: #222222;
+    font-weight: 500;
+    opacity: 50%;
+}
+
+.form-item-label {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.form-item-content {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 500;
+}

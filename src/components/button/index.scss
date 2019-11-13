@@ -1,0 +1,30 @@
+@import '../../define.scss';
+
+.btn {
+    border-radius: 8px;
+    border: 1px solid rgba(34, 34, 34, 0.1);
+    padding: 6px 12px;
+    color: white;
+
+    &.btn-success {
+        background-color: $color-light-green;
+    
+        &:active {
+            background-color: $color-green;
+        }
+    }
+    
+    &.btn-danger {
+        background-color: $color-light-red;
+        &:active {
+            background-color: $color-red;
+        }
+    }
+    
+    &.btn-icon {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        color: black;
+    }
+}

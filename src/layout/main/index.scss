@@ -1,0 +1,50 @@
+@import 'define.scss';
+
+.header {
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+.page {
+    width: 100%;
+    padding: 30px 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+@include respond-below(md) {
+    .header {
+        padding-top: 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $color-transparent-grey;
+    }
+}
+
+@include respond-above(md) {
+    .page {
+        max-width: 720px;
+    }
+}
+  
+@include respond-above(lg) {
+    .page {
+        max-width: 960px;
+    }
+}
+  
+@include respond-above(xl) {
+    .page {
+        max-width: 1140px;
+    }
+}
+  
+.logo {
+    height: 28px;
+}
+
+.notification {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 12px;
+}
+

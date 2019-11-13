@@ -1,0 +1,67 @@
+$color_light_green: #26c281;
+$color_light_red: #ff6448;
+$color_red: #c14d37;
+$color_green: #1c9160;
+$color_orange: #FFA03D;
+$color_grey: rgb(34, 34, 34);
+$color_light_grey: rgba(34, 34, 34, 0.5);
+$color_transparent_grey: rgba(34, 34, 34, 0.05);
+$color_transparent_grey1: rgba(34, 34, 34, 0.1);
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$breakpoint: map-get($breakpoints, sm);
+
+// Respond above.
+@mixin respond-above($breakpoint) {
+
+    // If the breakpoint exists in the map.
+    @if map-has-key($breakpoints, $breakpoint) {
+  
+      // Get the breakpoint value.
+      $breakpoint-value: map-get($breakpoints, $breakpoint);
+  
+      // Write the media query.
+      @media (min-width: $breakpoint-value) {
+        @content;
+      }
+  
+    // If the breakpoint doesn't exist in the map.
+    } @else {
+  
+      // Log a warning.
+      @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+  }
+
+  @include respond-above(sm) {
+    .element {
+      font-weight: bold;
+    }
+  }
+
+  @mixin respond-below($breakpoint) {
+
+    // If the breakpoint exists in the map.
+    @if map-has-key($breakpoints, $breakpoint) {
+  
+      // Get the breakpoint value.
+      $breakpoint-value: map-get($breakpoints, $breakpoint);
+  
+      // Write the media query.
+      @media (max-width: ($breakpoint-value - 1)) {
+        @content;
+      }
+  
+    // If the breakpoint doesn't exist in the map.
+    } @else {
+  
+      // Log a warning.
+      @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+  }

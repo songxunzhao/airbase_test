@@ -1,0 +1,53 @@
+@import 'define.scss';
+
+.approver-category-row {
+    opacity: 50%;
+    color: $color-grey;
+    padding-bottom: 15px;
+}
+
+.approver-row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.approver-index {
+    display: inline-block;
+    background-color: $color_transparent_grey1;
+    color: $color-light-grey;
+    border-radius: 8px;
+    font-family: "Maison Neue Bold";
+    font-size: 12px;
+    height: 16px;
+    min-width: 16px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 16px;
+}
+
+.approver-category-row + .approver-category-row, .approver-row + .approver-category-row {
+    border-top: 1px solid $color-transparent-grey;
+    padding-top: 15px;
+}
+
+.approver-row-cell {
+    display: inline-block;
+    vertical-align: middle;
+    &.cell-auto {
+        flex-grow: 1;
+        flex-shrink: 2;
+    }
+}
+
+.approver-row-cell + .approver-row-cell {
+    margin-left: 8px;
+}
+
+.approver-row-actions {
+    text-align: right;
+    .btn {
+        font-size: 20px;
+    }
+}

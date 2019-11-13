@@ -1,0 +1,14 @@
+@import 'define.scss';
+
+.message_category {
+    font-weight: 600;
+    margin-right: 10px;
+    line-height: 2em;
+}
+
+.message_content {
+    display: inline-block;
+    color: $color_light_grey;
+    font-weight: 500;
+    
+}
